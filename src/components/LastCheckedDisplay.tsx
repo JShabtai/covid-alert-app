@@ -11,7 +11,7 @@ export interface LastCheckedDisplayProps {
 
 export const LastCheckedDisplay = ({textDark}: LastCheckedDisplayProps) => {
   const i18n = useI18n();
-  const [exposureStatus] = useExposureStatus();
+  const exposureStatus = useExposureStatus();
   if (!exposureStatus.lastChecked?.timestamp) return null;
 
   const lastCheckedDate = new Date(exposureStatus.lastChecked.timestamp);
